@@ -28,4 +28,8 @@ Route::group(['middleware' => 'ceklogin'], function(){
     Route::patch('user/{id}', 'UserController@update')->name('updateuser');
 
     Route::get('raw', 'DataController@indexRAW')->name('raw');
+
+    Route::get('product', 'ProductController@index')->name('product');
+    Route::get('product/add', 'ProductController@create')->name('addproduct');
+    Route::get('product/save', 'ProductController@store')->name('saveproduct');
 });

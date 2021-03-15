@@ -8,7 +8,7 @@
         </div>
         <div class="pull-left info">
         <p>{{ session('name') }}</p>
-        <p>{{ session('role') }}</p>
+        <small class="label bg-green">{{ session('role') }}</small>
         </div>
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
