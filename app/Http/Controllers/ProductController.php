@@ -68,9 +68,10 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
-        //
+        $products = Product::find($id);
+        return view('editproduct',['products' => $products]);
     }
 
     /**
@@ -80,9 +81,20 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+    		'code' => 'required',
+    		'product' => 'required',
+    		'stock' => 'required'
+        ]);
+        
+        $products = Product::find($id);
+        $products->code = $request->code;
+        $products->product = $request->product;
+        $products->stock = $request->stock;
+        $products->save();
+        return redirect()->route('product')->with('message','Data has been updated!');
     }
 
     /**
@@ -91,8 +103,10 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $products = Product::find($id);
+        $products->delete();
+        return redirect()->back()->with('message','Data has been deleted!');
     }
 }

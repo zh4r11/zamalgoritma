@@ -29,7 +29,7 @@
 
         <li>
           <a href="{{ route('product') }}">
-            <i class="fa fa-circle-o"></i> <span>User</span>
+            <i class="fa fa-database"></i> <span>Product</span>
             </span>
           </a>
         </li>

@@ -116,6 +116,6 @@ class UserController extends Controller
     {
         $users = User::find($id);
         $users->delete();
-        return redirect()->back()->with('message','Data has been deleted!');;
+        return redirect()->back()->with('message','Data has been deleted!');
     }
 }
