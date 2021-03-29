@@ -1,11 +1,11 @@
 @extends('layouts.master')
-@section('title', 'User')
+@section('title', 'Product')
 @section('content')
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        USER
+        Product
       </h1>
     </section>
 
@@ -26,14 +26,14 @@
                   <div class="row">
                       <div class="col-md-6">
                           <div class="form-group">
-                            <label @error('code') class="text-danger" @enderror>Name @error('code') | {{ $message }} @enderror</label>
+                            <label @error('code') class="text-danger" @enderror>Product Code @error('code') | {{ $message }} @enderror</label>
                             <input type="text" class="form-control" id="code" name="code" value="{{ old('code') }}" placeholder="Enter Product Code">
                           </div>
                         </div>
 
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label @error('product') class="text-danger" @enderror>Email @error('email') | {{ $message }} @enderror</label>
+                            <label @error('product') class="text-danger" @enderror>Product Name @error('product') | {{ $message }} @enderror</label>
                             <input type="text" class="form-control" id="product" name="product" value="{{ old('product') }}" placeholder="Enter Product Name">  
                           </div>
                       </div> 
@@ -42,8 +42,8 @@
                 <div class="row">
                   <div class="col-md-6">
                       <div class="form-group">
-                        <label @error('stock') class="text-danger" @enderror>Role @error('stock') | {{ $message }} @enderror</label>
-                        <input type="text" class="form-control" id="stock" name="stock" value="" placeholder="Enter Stock">
+                        <label @error('stock') class="text-danger" @enderror>Stock @error('stock') | {{ $message }} @enderror</label>
+                        <input type="text" class="form-control" id="stock" name="stock" value="{{ old('stock') }}" placeholder="Enter Stock">
                       </div>
                     </div>
               </div>

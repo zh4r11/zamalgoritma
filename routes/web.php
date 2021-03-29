@@ -31,5 +31,8 @@ Route::group(['middleware' => 'ceklogin'], function(){
 
     Route::get('product', 'ProductController@index')->name('product');
     Route::get('product/add', 'ProductController@create')->name('addproduct');
-    Route::get('product/save', 'ProductController@store')->name('saveproduct');
+    Route::post('product/save', 'ProductController@store')->name('saveproduct');
+    Route::delete('product/{id}', 'ProductController@destroy')->name('deleteproduct');
+    Route::get('product/{id}/edit', 'ProductController@edit')->name('editproduct');
+    Route::patch('product/{id}', 'ProductController@update')->name('updateproduct');
 });

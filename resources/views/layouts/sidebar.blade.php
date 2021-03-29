@@ -27,7 +27,14 @@
           </a>
         </li>
 
-        <li class="treeview">
+        <li>
+          <a href="{{ route('product') }}">
+            <i class="fa fa-circle-o"></i> <span>User</span>
+            </span>
+          </a>
+        </li>
+
+        <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-user"></i>
             <span>Data</span>
@@ -40,7 +47,7 @@
             <li><a href="{{ route('raw') }}"><i class="fa fa-circle-o"></i> Raw Data</a></li>
             <li><a href="#"><i class="fa fa-circle-o"></i> Follow Up Data</a></li>
           </ul>
-        </li>
+        </li> -->
 
         <li class="header">OTHER</li>
         <li>

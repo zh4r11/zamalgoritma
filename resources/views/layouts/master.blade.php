@@ -45,8 +45,8 @@
   <!-- Left side column. contains the sidebar -->
   @if(session('role') === "Telemarketing")
     @include('layouts.sidebartele')
-  @elseif(session('role') === "Admin")
-    @include('layouts.sidebartele')
+  @elseif(session('role') === "Admin Warehouse")
+    @include('layouts.sidebaraw')
   @else
     @include('layouts.sidebar')  
   @endif

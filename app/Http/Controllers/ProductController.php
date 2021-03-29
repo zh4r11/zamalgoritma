@@ -38,13 +38,13 @@ class ProductController extends Controller
     {
         $this->validate($request,[
     		'code' => 'required',
-    		'name' => 'required',
+    		'product' => 'required',
     		'stock' => 'required'
         ]);
 
         Product::create([
     		'code' => $request->code,
-    		'product' => $request->name,
+    		'product' => $request->product,
             'stock' => $request->stock
     	]);
         

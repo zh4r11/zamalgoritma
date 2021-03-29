@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'User')   
+@section('title', 'Product')   
 
 @push('page-styles')
 
@@ -13,7 +13,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        USER
+        PRODUCT
       </h1>
     </section>
 
@@ -51,9 +51,9 @@
                     <td>{{ $product->product }}</td>
                     <td>{{ $product->stock }}</td>
                     <td>
-                        <a href="{{ route('edituser',$user->id) }}" class="badge badge-success"><i class="fa fa-edit"></i> Edit</a>
-                        <a href="#" data-id="{{ $user->id }}" class="badge badge-danger swal-confirm"><i class="fa fa-trash">
-                        <form action="{{ route('deleteuser',$user->id) }}" id="delete{{ $user->id }}" method="POST">
+                        <a href="{{ route('editproduct',$product->id) }}" class="badge badge-success"><i class="fa fa-edit"></i> Edit</a>
+                        <a href="#" data-id="{{ $product->id }}" class="badge badge-danger swal-confirm"><i class="fa fa-trash">
+                        <form action="{{ route('deleteproduct',$product->id) }}" id="delete{{ $product->id }}" method="POST">
                           @csrf
                           @method('delete')
                         </form></i>
@@ -84,7 +84,7 @@
                     <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span></button>
-                      <h4 class="modal-title">Delete User</h4>
+                      <h4 class="modal-title">Delete Product</h4>
                     </div>
                     <div class="modal-body">
                       <p>Are you sure to delete this data?</p>
@@ -154,7 +154,7 @@
 //   console.log($(this).data('id'))
 //   let id = $(this).data('id')
 //   $.ajax({
-//       url:'/user/delete/${id}',
+//       url:'/product/delete/${id}',
 //       method:"DELETE",
 //       success: function(data){
 //         console.log(data)
